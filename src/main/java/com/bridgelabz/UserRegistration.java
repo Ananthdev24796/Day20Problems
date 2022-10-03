@@ -19,4 +19,14 @@ public class UserRegistration {
 
             return matcherObj.matches();
         }
+    public static boolean checkLastName(String lName){
+        String userRegistrationRegEx = "^[A-Z]{1}[a-z]{2,}";
+        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
+
+        Matcher matcherObj = patternObj.matcher(lName);
+
+        return matcherObj.matches();
+    }
+
+
 }
