@@ -36,6 +36,14 @@ public class UserRegistration {
 
         return matcherObj.matches();
     }
+    public static boolean checkPhoneNumber(String number){
+        String  userRegistrationRegEx = "[91]{2} [0-9]{10}";
+        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
+
+        Matcher matcherObj = patternObj.matcher(number);
+
+        return matcherObj.matches();
+    }
 
 
 }

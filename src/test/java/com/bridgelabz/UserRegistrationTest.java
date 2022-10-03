@@ -23,6 +23,12 @@ public class UserRegistrationTest {
         boolean result = userRegistration.checkEMail("abc.xyz@bl.co.in");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void checking_Phone_Number_Method(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkPhoneNumber("91 9920456790");
+        Assert.assertEquals(true,result);
+    }
 
 
 }
