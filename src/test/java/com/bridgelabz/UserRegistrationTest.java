@@ -17,6 +17,12 @@ public class UserRegistrationTest {
         boolean result = userRegistration.checkLastName("Amaze");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void checking_EMail_Method(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkEMail("abc.xyz@bl.co.in");
+        Assert.assertEquals(true,result);
+    }
 
 
 }
