@@ -45,7 +45,20 @@ public class UserRegistrationTest {
     @Test
     public void checking_Password_Method_Atleast_One_Upper_Case(){
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.checkPasswordAtleastOneUpperCase("Password123");
+        boolean result = userRegistration.checkPasswordAtLeastOneUpperCase("Password23");
+        Assert.assertEquals(true,result);
+    }
+    @Test
+    public void checking_Password_Method_Atleast_One_Numberic(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkPasswordAtLeastOneNumeric("Password123");
+        Assert.assertEquals(true,result);
+    }
+
+    @Test
+    public void checking_Password_Method_Atleast_One_Special_Character(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkPasswordAtLeastOneSpecialCharacter("Password@123");
         Assert.assertEquals(true,result);
     }
 
