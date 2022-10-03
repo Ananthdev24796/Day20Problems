@@ -29,6 +29,12 @@ public class UserRegistrationTest {
         boolean result = userRegistration.checkPhoneNumber("91 9920456790");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void checking_Password_Method(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkPassword("Password@123");
+        Assert.assertEquals(true,result);
+    }
 
 
 }

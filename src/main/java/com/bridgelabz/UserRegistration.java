@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     /**
-     * UC3
-     * As a User need to
-     * enter a valid email - E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc,
-     * bl & co) and 2 optional (xyz & in) withprecise @ and . positions
+     * UC5
+     *  As a User need to follow pre-defined Password rules.
+     * 	Rule1 minimum 8 Characters
+     *  NOTE – All rules must be passed
      */
 
         public static boolean checkFirstName(String fName){
@@ -41,6 +41,14 @@ public class UserRegistration {
         Pattern patternObj = Pattern.compile(userRegistrationRegEx);
 
         Matcher matcherObj = patternObj.matcher(number);
+
+        return matcherObj.matches();
+    }
+    public static boolean checkPassword(String password){
+        String  userRegistrationRegEx = "[a-zA-Z0-9@&$#]{8,}";
+        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
+
+        Matcher matcherObj = patternObj.matcher(password);
 
         return matcherObj.matches();
     }
