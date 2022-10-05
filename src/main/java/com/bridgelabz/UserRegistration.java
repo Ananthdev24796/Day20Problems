@@ -29,7 +29,7 @@ public class UserRegistration {
         return matcherObj.matches();
     }
     public static boolean checkEMail(String email){
-        String  userRegistrationRegEx = "^[a-z]{1,}(.[a-z]{1,})+[@][bl]+.co(.in)";
+        String  userRegistrationRegEx = "^[a-zA-Z0-9.+_-]+[@][a-zA-Z0-9]+(.[a-z]{2,})+(.[a-z]{2,})";
         Pattern patternObj = Pattern.compile(userRegistrationRegEx);
 
         Matcher matcherObj = patternObj.matcher(email);

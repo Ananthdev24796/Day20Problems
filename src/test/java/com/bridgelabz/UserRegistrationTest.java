@@ -22,7 +22,7 @@ public class UserRegistrationTest {
     @Test
     public void checking_EMail_Method() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.checkEMail("abc.xyz@bl.co.in");
+        boolean result = userRegistration.checkEMail("blabz1@gmail.co.au");
         Assert.assertEquals(true, result);
     }
 
