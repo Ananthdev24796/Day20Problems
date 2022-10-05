@@ -45,34 +45,10 @@ public class UserRegistration {
         return matcherObj.matches();
     }
     public static boolean checkPassword(String password){
-        String  userRegistrationRegEx = "[a-zA-Z0-9@&$#]{8,}";
-        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
-
-        Matcher matcherObj = patternObj.matcher(password);
-
-        return matcherObj.matches();
-    }
-    public static boolean checkPasswordAtLeastOneUpperCase(String uPassword){
-        String  userRegistrationRegEx = "(?=.*[a-z])(?=.*[A-Z]).{8,16}";
-        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
-
-        Matcher matcherObj = patternObj.matcher(uPassword);
-
-        return matcherObj.matches();
-    }
-    public static boolean checkPasswordAtLeastOneNumeric(String nPassword){
-        String  userRegistrationRegEx = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}";
-        Pattern patternObj = Pattern.compile(userRegistrationRegEx);
-
-        Matcher matcherObj = patternObj.matcher(nPassword);
-
-        return matcherObj.matches();
-    }
-    public static boolean checkPasswordAtLeastOneSpecialCharacter(String sPassword){
         String  userRegistrationRegEx = "(?=.*[@#$&])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}";
         Pattern patternObj = Pattern.compile(userRegistrationRegEx);
 
-        Matcher matcherObj = patternObj.matcher(sPassword);
+        Matcher matcherObj = patternObj.matcher(password);
 
         return matcherObj.matches();
     }
